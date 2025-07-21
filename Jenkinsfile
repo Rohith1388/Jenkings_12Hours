@@ -17,13 +17,13 @@ pipeline {
                 echo 'Deploying...'
             }
         }
-    post {
+       post {
         success {
             emailext ( to: 'runrajarun31@gmail.com', subject: 'Pipeline Fail Status', body: "The pipeline got failed")
-        }
-    failure{
+                }
+        failure {
         emailext ( to: 'runrajarun31@gmail.com', subject: 'Pipeline Fail Status', body: "The pipeline got failed" )
-            }   
+                }   
+            }
         }
-    }
 }
