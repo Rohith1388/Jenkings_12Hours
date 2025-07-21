@@ -21,6 +21,6 @@ pipeline {
 }
 post {
     success {
-        emailext (emailext body: '', replyTo: 'runrajarun31@gmail.com', subject: 'Pipeline Status', to: 'runrajarun31@gmail.com')
+        emailext ( replyTo: 'runrajarun31@gmail.com', subject: 'Pipeline Status', to: 'runrajarun31@gmail.com')
     }
 }
