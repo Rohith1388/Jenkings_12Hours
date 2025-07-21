@@ -21,6 +21,9 @@ pipeline {
 }
 post {
     success {
-        emailext ( replyTo: 'runrajarun31@gmail.com', subject: 'Pipeline Status', to: 'runrajarun31@gmail.com')
+        emailext ( to: 'runrajarun31@gmail.com', subject: 'Pipeline Fail Status', body: "The pipeline got failed")
     }
+    failure{
+        emailext ( to: 'runrajarun31@gmail.com', subject: 'Pipeline Fail Status', body: "The pipeline got failed" )
+    }   
 }
